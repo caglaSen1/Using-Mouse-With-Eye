@@ -19,7 +19,7 @@ while True:
     frame_h, frame_w, _ch = frame.shape
 
     if landmark_points:
-        landmarks = landmark_points[0].landmark  # bu satırda yüzlerin ilk tespit edilen yüzünün hatlarını landmarks değişkenine atar.
+        landmarks = landmark_points[0].landmark   # this line assigns the lines of the first detected face of the faces to the landmarks variable.
         for id, lm in enumerate(landmarks[474:478]):
             x = int(lm.x * frame_w)
             y = int(lm.y * frame_h)
